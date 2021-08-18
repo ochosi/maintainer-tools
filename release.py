@@ -194,7 +194,7 @@ def get_pullrequest_infos(api, milestone):
         msg = markdown(pr.body)
         print(f" * {pr.url}")
         if not msg:
-            msg = f"  * {pr.title}: {pr.body}"
+            msg = f"  * {pr.title}: {pr.body}\n{pr.url}"
         summaries.append(msg)
 
     msg_ok(f"Collected summaries from {i} pull requests.")
